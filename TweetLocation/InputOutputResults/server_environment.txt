@@ -1,0 +1,93 @@
+
+
+Amazon AWS EC2 Environment
+===========================
+
+[root@ip-172-31-47-253 my-tweet-location]# hostname
+ip-172-31-47-253
+[root@ip-172-31-47-253 my-tweet-location]#
+
+[root@ip-172-31-47-253 my-tweet-location]# uname -a
+Linux ip-172-31-47-253 3.4.62-53.42.amzn1.x86_64 #1 SMP Fri Sep 20 07:23:24 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+[root@ip-172-31-47-253 my-tweet-location]#
+
+[root@ip-172-31-47-253 my-tweet-location]# java -version
+java version "1.6.0_30"
+OpenJDK Runtime Environment (IcedTea6 1.13.3) (amazon-67.1.13.3.64.amzn1-x86_64)
+OpenJDK 64-Bit Server VM (build 23.25-b01, mixed mode)
+
+[root@ip-172-31-47-253 my-tweet-location]# mvn --version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/apache-maven/apache-maven-3.1.1
+Java version: 1.6.0_30, vendor: Sun Microsystems Inc.
+Java home: /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.4.62-53.42.amzn1.x86_64", arch: "amd64", family: "unix"
+[root@ip-172-31-47-253 my-tweet-location]#
+
+
+
+HADOOP ENVIRONMENT
+===================
+[root@ip-172-31-47-253 my-tweet-location]# echo $HADOOP_HOME
+/usr/local/hadoop-1.2.1
+[root@ip-172-31-47-253 my-tweet-location]#
+
+
+root@ip-172-31-47-253 my-tweet-location]# jps
+26677 JobTracker
+26462 DataNode
+26793 TaskTracker
+26160 NameNode
+26572 SecondaryNameNode
+1621 Jps
+[root@ip-172-31-47-253 my-tweet-location]#
+
+[root@ip-172-31-47-253 my-tweet-location]# hadoop jar /home/ec2-user/TweetLocation/my-tweet-location/target/my-tweet-location-1.0-SNAPSHOT.jar  TweetLocation InputFileZipLatLong.txt output
+Warning: $HADOOP_HOME is deprecated.
+
+14/07/01 16:16:47 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/07/01 16:16:49 INFO input.FileInputFormat: Total input paths to process : 1
+14/07/01 16:16:49 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/07/01 16:16:49 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/07/01 16:16:50 INFO mapred.JobClient: Running job: job_201407011326_0008
+14/07/01 16:16:51 INFO mapred.JobClient:  map 0% reduce 0%
+14/07/01 16:17:17 INFO mapred.JobClient:  map 100% reduce 0%
+14/07/01 16:17:38 INFO mapred.JobClient:  map 100% reduce 100%
+14/07/01 16:17:47 INFO mapred.JobClient: Job complete: job_201407011326_0008
+14/07/01 16:17:47 INFO mapred.JobClient: Counters: 29
+14/07/01 16:17:47 INFO mapred.JobClient:   Job Counters
+14/07/01 16:17:47 INFO mapred.JobClient:     Launched reduce tasks=1
+14/07/01 16:17:47 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=33227
+14/07/01 16:17:47 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/07/01 16:17:47 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/07/01 16:17:47 INFO mapred.JobClient:     Launched map tasks=1
+14/07/01 16:17:47 INFO mapred.JobClient:     Data-local map tasks=1
+14/07/01 16:17:47 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=20900
+14/07/01 16:17:47 INFO mapred.JobClient:   File Output Format Counters
+14/07/01 16:17:47 INFO mapred.JobClient:     Bytes Written=731849
+14/07/01 16:17:47 INFO mapred.JobClient:   FileSystemCounters
+14/07/01 16:17:47 INFO mapred.JobClient:     FILE_BYTES_READ=781582
+14/07/01 16:17:47 INFO mapred.JobClient:     HDFS_BYTES_READ=1461622
+14/07/01 16:17:47 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=1671746
+14/07/01 16:17:47 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=731849
+14/07/01 16:17:47 INFO mapred.JobClient:   File Input Format Counters
+14/07/01 16:17:47 INFO mapred.JobClient:     Bytes Read=1461502
+14/07/01 16:17:47 INFO mapred.JobClient:   Map-Reduce Framework
+14/07/01 16:17:47 INFO mapred.JobClient:     Map output materialized bytes=781582
+14/07/01 16:17:47 INFO mapred.JobClient:     Map input records=42741
+14/07/01 16:17:47 INFO mapred.JobClient:     Reduce shuffle bytes=781582
+14/07/01 16:17:47 INFO mapred.JobClient:     Spilled Records=84098
+14/07/01 16:17:47 INFO mapred.JobClient:     Map output bytes=697478
+14/07/01 16:17:47 INFO mapred.JobClient:     CPU time spent (ms)=10150
+14/07/01 16:17:47 INFO mapred.JobClient:     Total committed heap usage (bytes)=152375296
+14/07/01 16:17:47 INFO mapred.JobClient:     Combine input records=0
+14/07/01 16:17:47 INFO mapred.JobClient:     SPLIT_RAW_BYTES=120
+14/07/01 16:17:47 INFO mapred.JobClient:     Reduce input records=42049
+14/07/01 16:17:47 INFO mapred.JobClient:     Reduce input groups=2840
+14/07/01 16:17:47 INFO mapred.JobClient:     Combine output records=0
+14/07/01 16:17:47 INFO mapred.JobClient:     Physical memory (bytes) snapshot=258019328
+14/07/01 16:17:47 INFO mapred.JobClient:     Reduce output records=42049
+14/07/01 16:17:47 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1663000576
+14/07/01 16:17:47 INFO mapred.JobClient:     Map output records=42049
+[root@ip-172-31-47-253 my-tweet-location]#

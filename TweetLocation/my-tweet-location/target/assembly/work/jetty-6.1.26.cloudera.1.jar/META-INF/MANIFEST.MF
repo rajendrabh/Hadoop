@@ -1,0 +1,78 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+Built-By: jenkins
+Build-Jdk: 1.6.0_20
+implementation-version: 6.1.26.cloudera.1
+mode: development
+package: org.mortbay
+url: http://www.eclipse.org/jetty/jetty-parent/project/modules/jetty
+Export-Package: org.mortbay.jetty;uses:="org.mortbay.log,org.mortbay.i
+ o.nio,org.mortbay.jetty.bio,org.mortbay.io,org.mortbay.jetty.security
+ ,org.mortbay.jetty.webapp,org.mortbay.jetty.handler,org.mortbay.resou
+ rce,javax.servlet,org.mortbay.jetty.servlet,org.mortbay.util.ajax,org
+ .mortbay.thread,org.mortbay.component,org.mortbay.util,javax.servlet.
+ http";version="6.1.26.cloudera1",org.mortbay.io.nio;uses:="org.mortba
+ y.log,org.mortbay.jetty,org.mortbay.io,org.mortbay.thread,org.mortbay
+ .component";version="6.1.26.cloudera1",org.mortbay.servlet.jetty;uses
+ :="org.mortbay.jetty,javax.servlet,org.mortbay.io,org.mortbay.servlet
+ ,javax.servlet.http";version="6.1.26.cloudera1",org.mortbay.io;uses:=
+ "org.mortbay.log,org.mortbay.util";version="6.1.26.cloudera1",org.mor
+ tbay.jetty.bio;uses:="org.mortbay.log,org.mortbay.jetty,org.mortbay.i
+ o,org.mortbay.thread,org.mortbay.io.bio";version="6.1.26.cloudera1",o
+ rg.mortbay.jetty.security;uses:="org.mortbay.jetty,org.mortbay.log,or
+ g.mortbay.io,org.mortbay.jetty.bio,org.mortbay.jetty.webapp,org.mortb
+ ay.resource,org.mortbay.jetty.handler,javax.servlet,org.mortbay.jetty
+ .servlet,javax.security.cert,javax.net.ssl,org.mortbay.component,org.
+ mortbay.util,org.mortbay.io.bio,javax.servlet.http";version="6.1.26.c
+ loudera1",org.mortbay.jetty.webapp;uses:="org.mortbay.jetty,org.mortb
+ ay.log,org.mortbay.jetty.security,org.mortbay.xml,org.mortbay.resourc
+ e,org.mortbay.jetty.handler,javax.servlet,org.mortbay.jetty.servlet,o
+ rg.mortbay.util,javax.servlet.http,org.mortbay.jetty.deployer";versio
+ n="6.1.26.cloudera1",org.mortbay.xml;uses:="org.mortbay.log,javax.xml
+ .parsers,org.xml.sax,org.mortbay.resource,org.mortbay.component,org.m
+ ortbay.util,org.xml.sax.helpers";version="6.1.26.cloudera1",org.mortb
+ ay.jetty.nio;uses:="org.mortbay.log,org.mortbay.jetty,org.mortbay.io.
+ nio,org.mortbay.util.ajax,org.mortbay.io,org.mortbay.thread";version=
+ "6.1.26.cloudera1",org.mortbay.jetty.handler;uses:="org.mortbay.log,o
+ rg.mortbay.jetty,org.mortbay.io,org.mortbay.jetty.webapp,org.mortbay.
+ resource,javax.servlet,org.mortbay.jetty.servlet,org.mortbay.componen
+ t,org.mortbay.util,javax.servlet.http";version="6.1.26.cloudera1",org
+ .mortbay.resource;uses:="org.mortbay.log,org.mortbay.util";version="6
+ .1.26.cloudera1",org.mortbay.jetty.servlet;uses:="org.mortbay.log,org
+ .mortbay.jetty,org.mortbay.io.nio,org.mortbay.io,org.mortbay.jetty.se
+ curity,org.mortbay.jetty.nio,org.mortbay.resource,org.mortbay.jetty.h
+ andler,javax.servlet,org.mortbay.component,org.mortbay.util,javax.ser
+ vlet.http";version="6.1.26.cloudera1",org.mortbay.io.bio;uses:="org.m
+ ortbay.io";version="6.1.26.cloudera1",org.mortbay.jetty.deployer;uses
+ :="org.mortbay.log,org.mortbay.jetty,org.mortbay.jetty.webapp,org.mor
+ tbay.xml,org.mortbay.jetty.handler,org.mortbay.resource,org.mortbay.u
+ til,org.mortbay.component";version="6.1.26.cloudera1"
+Ignore-Package: org.mortbay.jetty,org.mortbay.servlet.jetty,org.mortba
+ y.io.nio,org.mortbay.jetty.bio,org.mortbay.io,org.mortbay.jetty.secur
+ ity,org.mortbay.jetty.webapp,org.mortbay.jetty.nio,org.mortbay.xml,or
+ g.mortbay.jetty.handler,org.mortbay.resource,org.mortbay.jetty.servle
+ t,org.mortbay.io.bio,org.mortbay.jetty.deployer
+Tool: Bnd-0.0.238
+Bundle-Name: Jetty Server
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Vendor: Mort Bay Consulting
+Bundle-Version: 6.1.26.cloudera1
+Bnd-LastModified: 1317155770923
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .eclipse.org/org/documents/epl-v10.php
+Bundle-Description: Jetty server core
+Import-Package: javax.net.ssl,javax.security.cert,javax.servlet;versio
+ n="2.5",javax.servlet.http;version="2.5",javax.servlet.jsp;resolution
+ :=optional,javax.servlet.resources;resolution:=optional;version="2.5"
+ ,javax.xml.parsers,org.apache.jasper.servlet;resolution:=optional,org
+ .mortbay.component;version="6.1.26.cloudera1",org.mortbay.jetty.handl
+ er.management;resolution:=optional,org.mortbay.log;version="6.1.26.cl
+ oudera1",org.mortbay.servlet;version="6.1.26.cloudera1",org.mortbay.t
+ hread;version="6.1.26.cloudera1",org.mortbay.util;version="6.1.26.clo
+ udera1",org.mortbay.util.ajax;version="6.1.26.cloudera1",org.xml.sax,
+ org.xml.sax.helpers
+Bundle-SymbolicName: org.mortbay.jetty.server
+Bundle-DocURL: http://jetty.mortbay.org
+
