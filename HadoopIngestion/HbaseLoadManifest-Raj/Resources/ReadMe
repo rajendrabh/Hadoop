@@ -1,0 +1,14 @@
+1. Input Manifest file : /home/edureka/Desktop/LMS/Resources/manifest.txt
+2. Copy it to HDFS :
+     a. cd /usr/lib/hadoop-2.2.0
+     b. hdfs dfs -mkdir /user/edureka/Resources
+     c. hdfs dfs -put /home/edureka/Desktop/LMS/Resources/manifest /user/edureka/Resources/manifest
+3. Create output HDFS dir for HFiles : /user/edureka/Resources/output     
+4. Run 'LoadDriver' from Eclipse. Arguments of HDFS input, output and Hbase table alreday in Configurations
+    a. Input path : hdfs://127.0.0.1:8020/user/edureka/Resources/file1.txt 
+    b. Output path : hdfs://127.0.0.1:8020/user/edureka/Resources/output/output4   (change output path at each run)
+    c. Hbase Table name : NotesArchive
+5. One-Time only : Create HBase table 'NotesArchive' with col family 'md'
+      a. cd /usr/lib/hbase-0.96.2-hadoop2
+      b. hbase shell
+      c. create 'NotesArchive' 'md'

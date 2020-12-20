@@ -1,0 +1,24 @@
+package BulkImport;
+
+/**
+ * HBase table columns for the 'md' column family
+ */
+public enum HColEnum {
+	//MD_COL_A("ID".getBytes()), 
+	//MD_COL_B("DatabaseID".getBytes()),
+	MD_COL_C("ExternalID".getBytes()), 
+	MD_COL_D("ParentDocumentExternalID".getBytes()),
+	MD_COL_E("DocumentTypeDescription".getBytes()), 
+	MD_COL_F("ProjectID".getBytes()),
+	MD_COL_G("Title".getBytes());
+	
+	private final byte[] columnName;
+
+	HColEnum(byte[] column) {
+		this.columnName = column;
+	}
+
+	public byte[] getColumnName() {
+		return this.columnName;
+	}
+}
